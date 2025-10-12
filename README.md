@@ -39,21 +39,6 @@ open Arrays/two_sum.py
 Run it locally or test on LeetCode:
 python3 Arrays/two_sum.py
 
-## Example Problem
-Problem: Two Sum
-Approach: Hash map to track complements
-Time Complexity: O(n)
-Code:
-class Solution:
-    def twoSum(self, nums, target):
-        seen = {}
-        for i, num in enumerate(nums):
-            diff = target - num
-            if diff in seen:
-                return [seen[diff], i]
-            seen[num] = i
-
-
 ## Future Goals
  - Write unit tests for critical algorithms
  - Add problem explanations in Markdown format
