@@ -1,21 +1,60 @@
-# LeetCodeElixir
+#  LeetCode Solutions
 
-**TODO: Add description**
+> A collection of LeetCode problems I’ve solved, with clean, well-commented code and explanations — focusing on algorithmic thinking, data structures, and problem-solving efficiency.
 
-## Installation
+---
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `leet_code_elixir` to your list of dependencies in `mix.exs`:
+##  Overview
 
-```elixir
-def deps do
-  [
-    {:leet_code_elixir, "~> 0.1.0"}
-  ]
-end
-```
+This repository contains my solutions to **LeetCode** coding problems, organized by topic and difficulty.  
+Each solution is written with clarity and performance in mind, often including brief comments to explain the approach or key idea.
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/leet_code_elixir](https://hexdocs.pm/leet_code_elixir).
+The goal of this repo is to:
+- Improve algorithmic problem-solving skills  
+- Track progress over time  
+- Build a reusable library of efficient solutions  
 
+---
+
+##  Topics Covered
+
+| Category | Subtopics |
+|-----------|------------|
+| **Data Structures** | Arrays, Linked Lists, Stacks, Queues, Trees, Graphs, Heaps |
+| **Algorithms** | Sorting, Searching, Recursion, Dynamic Programming, Backtracking |
+| **Mathematics** | Bit Manipulation, Number Theory |
+| **Others** | Sliding Window, Greedy, Two Pointers, Hash Maps |
+
+---
+
+##  How to Use
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/<your-username>/leet_code_solutions.git
+   cd leet_code_solutions
+
+Open any folder and review the problem file:
+open Arrays/two_sum.py
+Run it locally or test on LeetCode:
+python3 Arrays/two_sum.py
+
+## Example Problem
+Problem: Two Sum
+Approach: Hash map to track complements
+Time Complexity: O(n)
+Code:
+class Solution:
+    def twoSum(self, nums, target):
+        seen = {}
+        for i, num in enumerate(nums):
+            diff = target - num
+            if diff in seen:
+                return [seen[diff], i]
+            seen[num] = i
+
+
+## Future Goals
+ - Write unit tests for critical algorithms
+ - Add problem explanations in Markdown format
+ - Build a CLI tool to search problems locally
