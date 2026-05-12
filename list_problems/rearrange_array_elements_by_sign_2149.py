@@ -1,0 +1,22 @@
+from typing import List
+class Solution:
+    def rearrangeArray(self, nums: List[int]) -> List[int]:
+        result = [0] * len(nums)
+        pos = 0
+        neg = 1
+
+        for num in nums:
+            if num > 0:
+                result[pos] = num
+                pos += 2
+            else:
+                result[neg] = num
+                neg += 2
+        
+        return result
+
+if __name__ == '__main__':
+    sol = Solution()
+    print(sol.rearrangeArray([1,2,-3,-1,-2,3]))
+    print(sol.rearrangeArray([3,1,-2,-5,2,-4]))
+    print(sol.rearrangeArray([-1,1]))
